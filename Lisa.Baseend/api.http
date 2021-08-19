@@ -1,0 +1,40 @@
+###Get 获取用户列表
+GET http://localhost:5000/users HTTP/1.1
+# Authorization: Bearer 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImV4cCI6MTYyNTgwMjY1MCwiaXNzIjoiV29veiJ9.jMwfRUcgdRA1C7pnZzNXOZiSUy8JMDR6atq0SN8Xp4U
+
+### 获取指定id用户
+GET http://localhost:5000/users/2 HTTP/1.1
+# Authorization: Bearer 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImV4cCI6MTYyNTgwMjY1MCwiaXNzIjoiV29veiJ9.jMwfRUcgdRA1C7pnZzNXOZiSUy8JMDR6atq0SN8Xp4U
+
+### Post 创建用户
+POST http://localhost:5000/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "Username":"admin",
+    "Password":"123",
+    "Remarks":" wt = good nice + 土笨笨"
+}
+
+### Put 修改指定用户
+PUT http://localhost:5000/users/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "Username":"good nice + 土笨笨",
+    "Password":"111"
+}
+
+### Delete 删除指定用户
+DELETE http://localhost:5000/users/2 HTTP/1.1
+
+### 登录并获取token
+POST http://localhost:5000/users/token HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "password":"1234"
+}

@@ -1,0 +1,13 @@
+# 针对可能的编辑器的设置
+# .vscode
+.vs
+
+
+# 针对后端asp.net core api项目的设置
+bin
+debug
+obj
+
+
+# 针对前端vue项目的设置
+node_modules
